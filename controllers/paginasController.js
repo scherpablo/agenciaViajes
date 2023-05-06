@@ -1,17 +1,19 @@
 //importamos el modelo de viajes
 import { Viaje } from "../models/Viaje.js";
+//importamos el modelo de testimoniales
+import { Testimonial } from "../models/Testimoniales.js";
 
 const paginaInicio = (req, res) => {
     const pagina = "Inicio"; // Creamos una variable que contiene un string
     res.render("inicio", {
-        pagina: pagina, // Pasamos la variable a la vista como objeto
+        pagina, // Pasamos la variable a la vista como objeto
     });
 };
 
 const paginaNosotros = (req, res) => {
     const pagina = "Nosotros"; 
     res.render("nosotros", {
-        pagina: pagina,
+        pagina,
     });
 };
 
@@ -40,11 +42,18 @@ const paginaDetalleViaje = async (req, res) => {
     }
 };
 
-const paginaTestimoniales = (req, res) => {
-    const pagina = "Testimoniales"; 
-    res.render("testimoniales", {
-        pagina: pagina,
+const paginaTestimoniales = async (req, res) => {
+
+    try {
+        const pagina = "Testimoniales";
+        const testimoniales = await Testimonial.findAll();
+        res.render("testimoniales", {
+        pagina,
+        testimoniales
     });
+    }catch (error) {
+        console.log(error);
+    }
 };
 
 

@@ -26,6 +26,9 @@ app.use((req, res, next) => {
     next();
 })
 
+//Agreamos body parser para leer los datos del formulario
+app.use(express.urlencoded({extended: true}));
+
 // Definimos la carpeta publica
 app.use(express.static('public'));
 

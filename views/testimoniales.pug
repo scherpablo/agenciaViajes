@@ -4,22 +4,38 @@ block contenido
     
     main.container.mt-5 
         h1.text-center.mt-5 #{pagina}
-        .row
 
-            h2.d-block.w-100.text-center Agrega un Testimonial
+        blockquote.text-center Lee sobre nuestros clientes 
+        .row.testimoniales 
+            each testimonial in testimoniales
+                .col-md-6.col-lg-4.mb-4
+                    .card 
+                        .card-body 
+                            blockquote.blockquote 
+                            p.mb-0
+                                | #{testimonial.mensaje}
+                            footer.blockquote-footer
+                                | #{testimonial.nombre}
+        .row    
+            .col-md-12
+                h2.d-block.w-100.text-center Agrega un Testimonial
+
+                if (errores) 
+                    each error in errores   
+                        .alert.col.alert-danger.text-center= error.mensaje
 
             .row.justify-content-center.col 
                 .col-md-8
-                    form(action="", method="POST")
+                    form(action="/testimoniales", method="POST")
                         .form-group
                             label(for="nombre", class="font-weight-bolder") Nombre
-                            input#nombre(type="text", name="nombre", placeholder="tu nombre", class="form-control")
+                            input#nombre(type="text", name="nombre", placeholder="tu nombre", class="form-control", value= nombre)
                         .form-group
                             label(for="correo", class="font-weight-bolder") Correo Electronico
-                            input#correo(type="email", name="correo", placeholder="tu correo", class="form-control")
+                            input#correo(type="text", name="correo", placeholder="tu correo", class="form-control", value= correo)
                         .form-group
                             label(for="mensaje",class="font-weight-bolder") Mensaje
-                            textarea#mensaje(name="mensaje", placeholder="tu mensaje", class="form-control",  rows="5") 
+                            textarea#mensaje(name="mensaje", placeholder="tu mensaje", class="form-control",  rows="5")= mensaje 
 
                         input.btn.btn-success.btn-block(type="submit")
 
