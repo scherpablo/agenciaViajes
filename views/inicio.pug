@@ -1,7 +1,37 @@
 extends ./layout/index
 
+
+block slider
+    .slider 
+        h1 Rio de Janeiro 
+        em aventura 
+
 block contenido 
     main.container.mt-5 
-        .row 
-            h1 #{pagina}
+        h2.text-center.mb-5 Sobre Nosotros
+        .row
+            .col-md-6
+                p.font-size Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla libero urna, suscipit vitae purus sed, congue maximus magna. Duis hendrerit at lacus interdum semper. Etiam mollis nisl nec lectus efficitur, consequat egestas quam volutpat. Duis pulvinar mi hendrerit, dapibus urna vitae, hendrerit tellus. Sed cursus ac magna in eleifend. Duis hendrerit at lacus interdum semper. Duis hendrerit at lacus interdum semper. Duis hendrerit at lacus interdum semper. 
+                p.font-size Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla libero urna, suscipit vitae purus sed, congue maximus magna. Duis hendrerit at lacus interdum semper. Duis hendrerit at lacus interdum semper. Duis hendrerit at lacus interdum semper. Duis hendrerit at lacus interdum semper. 
+            .col-md-6
+                img(src="img/inicio_nosotros.jpg" alt="imagen nosotros" class="img-fluid")
+        
+        include ./layout/bloqueViajes 
+
+    .descuento 
+        .container 
+            .row 
+                .col-md-6
+                    .contenido
+                        h3 5% de descuento 
+                        p.titulo Viaje a Canada 
+                        p.fecha 20 de Diciembre de 2023 - 20 de Enero 2024
+                        p.precio USD 2.500
+
+    .container
+        h2.mt-5.text-center Testimoniales
+
+        include ./layout/bloqueTestimoniales
+            
+
 
