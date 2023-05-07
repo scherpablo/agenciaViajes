@@ -4,11 +4,11 @@ import dotenv from 'dotenv'; //para poder leer las variables de entorno
 dotenv.config();
 
 const db = new Sequelize(
-    process.env.DB_NAME || "turismo_viajes",
-    process.env.DB_USER || "root",
-    process.env.DB_PASS || "", {
-    host: process.env.DB_HOST || "localhost",
-    port: process.env.PORT || '3306',
+    process.env.MYSQLDATABASE || "turismo_viajes",
+    process.env.MYSQLUSER || "root",
+    process.env.MYSQLPASSWORD || "", {
+    host: process.env.MYSQLHOST || "localhost",
+    port: process.env.MYSQLPORT || '3306',
     dialect: 'mysql',
     define: {
         timestamps: false
