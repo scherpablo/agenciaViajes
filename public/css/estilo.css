@@ -1,0 +1,203 @@
+:root {
+    --primary-color: #15B9D5;
+    --secondary-color: #DC135F;
+    --background-color: #333333;
+    --background-color-icons: #444444;
+    --text-color: #FFFFFF;
+    font-family: 'Staatliches', cursive;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+h1, h2, h3 {
+    font-family: 'Staatliches', cursive;
+    color: var(--primary-color);
+}
+
+h1 {
+    font-size: 3.4rem;
+}
+
+h2 {
+    font-size: 2.4rem;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+.btn-success {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    padding: .8rem 0;
+    text-transform: uppercase;
+    border-radius: .8rem;
+}
+
+.btn-success:hover {
+    background-color: rgba(220, 19, 95, 0.8);
+    border-color: rgba(220, 19, 95, 0.8);
+}
+
+.slider {
+    background: url(../img//superior.jpg);
+    min-height: 600px;
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color);
+}
+
+.slider h1 {
+    color: var(--text-color);
+}
+
+.slider em {
+    font-family: 'Covered By Your Grace', cursive;
+    font-size: 4rem;
+    order: -1;
+    line-height: .8;
+    color: rgba(255, 255, 255, .5);
+}
+
+@media (min-width:768px) {
+    .slider em {
+        font-size: 8rem;
+    }
+}
+
+.home {
+    position: relative;
+}
+
+.home .navegacion {
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.nav-link.active {
+    border-bottom: 5px solid var(--primary-color);
+}
+
+.nav-link:hover {
+    color:#666666
+}
+
+blockquote {
+    font-weight: bold;
+    line-height: 2;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 2;
+}
+
+.font-size{
+    font-size: 1rem;
+}
+
+.navegacion {
+    background-color: var(--primary-color);
+}
+
+header .nav a {
+    font-family: 'Staatliches', cursive;
+    font-size: 2rem;
+    color: var(--text-color);
+}
+
+footer .nav a,
+.copyright {
+    font-family: 'Staatliches', cursive;
+    font-size: 1.6rem;
+    color: var(--text-color);
+}
+
+.listado-iconos {
+    background-color: var(--background-color-icons);
+}
+
+.listado-iconos img {
+    height: 100px;
+}
+
+.descuento {
+    height: 400px;
+    background-image: linear-gradient( rgba(0, 0, 0, .5) 0%,  rgba(0, 0, 0, .5) 100%),  url(../img/cupon.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media (min-width:768px) {
+    .descuento {
+        height: 400px;
+        background-image: linear-gradient(
+            to right,
+            rgba(0, 0, 0, .8) 0%, 
+            rgba(0, 0, 0, .8) 50%, 
+            transparent 100%
+        ), url(../img/cupon.jpg);
+    }
+}
+    .descuento .contenido {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 400px;
+    color: #FFFFFF;
+    }
+    .descuento p {
+    font-family: 'Staatliches', cursive;
+    line-height: .8;
+    }
+    .descuento .titulo {
+    font-size: 2.4rem;
+    }
+    .descuento .precio {
+    color: #FFB347;
+    font-size: 3rem;
+    }
+    
+    .proximos-viajes p {
+    font-size: .9rem;
+    color: #000000;
+    }
+
+    i {
+    color: #FF69B4;
+    font-size: 2rem;
+    }
+    
+    .testimoniales p{
+    font-size: .8rem;
+    font-weight: normal;
+    color: #000000;
+    }
+    .testimoniales p::before {
+    background-image: url(../img/quote-dark.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 40px;
+    content: '';
+    width: 40px;
+    height: 40px;
+    display: block;
+    margin-bottom: 1rem;
+    }
+    .blockquote-footer {
+    text-align: right;
+    color: #FF69B4;
+    font-weight: bold;
+    margin-top: 1rem;
+    }
