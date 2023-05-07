@@ -4,7 +4,8 @@
   "description": "Protecto con NodeJS, Express, JavaScript, y mnás...",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "start": "node indes.js"
   },
   "type": "module",
   "author": "Pablo Scherpa",
