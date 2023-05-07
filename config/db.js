@@ -3,9 +3,12 @@ import dotenv from 'dotenv'; //para poder leer las variables de entorno
 
 dotenv.config();
 
-const db = new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PASS, {
-    host: process.env.DB_HOST,
-    port: '3306',
+const db = new Sequelize(
+    process.env.DB_NAME || "turismo_viajes",
+    process.env.DB_USER || "root",
+    process.env.DB_PASS || "", {
+    host: process.env.DB_HOST || "localhost",
+    port: process.env.PORT || '3306',
     dialect: 'mysql',
     define: {
         timestamps: false
