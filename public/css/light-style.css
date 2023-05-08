@@ -2,6 +2,7 @@
     font-family: 'Staatliches', cursive;
     font-family: 'Covered By Your Grace', cursive;
     font-family: 'Open Sans', sans-serif;
+    --button-color: #444444;
 }
 body {
     font-family: 'Open Sans', sans-serif;
@@ -18,6 +19,16 @@ h2 {
 }
 h3 {
     font-size: 3rem;
+}
+
+#theme-toggle {
+    background-color: var(--button-color);
+    color: #ffffff;
+    font-weight: bold;
+}
+
+html[data-theme="dark"] {
+    --button-color: #444444;
 }
 
 .btn-success {

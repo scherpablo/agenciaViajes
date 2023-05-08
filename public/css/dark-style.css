@@ -5,6 +5,7 @@
     --background-color-icons: #444444;
     --text-color: #FFFFFF;
     font-family: 'Staatliches', cursive;
+    --button-color: #FFFFFF;
 }
 
 body {
@@ -29,6 +30,16 @@ h2 {
 h3 {
     font-size: 3rem;
 }
+
+#theme-toggle {
+    background-color: var(--button-color);
+    color: #444444;
+    font-weight: bold;
+}
+
+/* html[data-theme="dark"] {
+    --button-color: white;
+} */
 
 .btn-success {
     background-color: var(--secondary-color);
@@ -185,7 +196,7 @@ footer .nav a,
     color: #000000;
     }
     .testimoniales p::before {
-    background-image: url(../img/quote-dark.jpg);
+    background-image: url(../img/quote.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 40px;

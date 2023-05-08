@@ -8,11 +8,14 @@ html(lang="en")
         link(rel='preconnect' href='https://fonts.googleapis.com')
         link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
         link(href='https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Staatliches&display=swap' rel='stylesheet')
-        link(rel="stylesheet", href="/css/bootstrap.min.css")
-        link(rel="stylesheet", href="/css/dark-style.css")        
+        //- link(rel="stylesheet", href="/css/bootstrap.min.css")
         //- link(rel="stylesheet", href="/css/light-style.css")        
+        //- link(rel="stylesheet", href="/css/dark-style.css", disabled="disabled")   
+        //- include styles
     body(class= clase)
+        include styles
         include header
         block slider
         block contenido
         include footer
+        script(src="/js/main.js") 
