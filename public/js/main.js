@@ -1,8 +1,9 @@
 const themeToggle = document.querySelector('#theme-toggle');
 const html = document.querySelector('html');
-const lightStyleLink = document.querySelector('link[href="/css/light-style.css"]');
-const darkStyleLink = document.querySelector('link[href="/css/dark-style.css"]');
-const themeToggleText = document.querySelector('#theme-toggle-text');
+// const lightStyleLink = document.querySelector('link[href="/css/light-style.css"]');
+const lightStyleLink = document.querySelector('link[href$="light-style.css"]');
+// const darkStyleLink = document.querySelector('link[href="/css/dark-style.css"]');
+const darkStyleLink = document.querySelector('link[href$="dark-style.css"]');
 
 themeToggle.addEventListener('click', () => {
     // Actualizar el dataset de html antes de verificarlo
@@ -15,15 +16,12 @@ themeToggle.addEventListener('click', () => {
         darkStyleLink.disabled = false;  
         
         themeToggle.style.backgroundColor = '#ffffff';
-        themeToggleText.textContent = 'LIGHT MODE';
+        themeToggle.textContent = 'LIGHT MODE';
     } else {
         lightStyleLink.disabled = false;
         darkStyleLink.disabled = true; 
 
         themeToggle.style.backgroundColor = '#444444';
-        themeToggleText.textContent = 'DARK MODE';
-        
-        // Cambiar el color del botón
-        // themeToggle.classList.remove('active');
+        themeToggle.textContent = 'DARK MODE';
     }
 });
